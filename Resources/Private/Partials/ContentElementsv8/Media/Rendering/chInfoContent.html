@@ -1,0 +1,28 @@
+                    <h3 class="text-center">
+                         <f:if condition="{settings.R2titleRawdataOutput} == 1">
+                                  <f:then>
+                                        <f:format.raw>{file.title}</f:format.raw>
+                                  </f:then>
+                                  <f:else>
+                                        <f:format.stripTags>{file.title}</f:format.stripTags>
+                                  </f:else>
+                         </f:if>
+                    </h3>
+
+                    <p class="text-center">
+                         <f:if condition="{settings.R2captionRawdataOutput} == 1">
+                                  <f:then>
+                                        <f:format.raw>{file.description}</f:format.raw>
+                                  </f:then>
+                                  <f:else>
+                                        <f:format.stripTags>{file.description}</f:format.stripTags>
+                                  </f:else>
+                         </f:if>
+
+                         <f:if condition="{settings.R2showMoreLink} == 1">
+                            <f:link.typolink parameter="{file.link}" title="{file.title -> f:format.stripTags()}" class="ch-link">
+                              <f:cObject typoscriptObjectPath="lib.rollovercollection2.label.readMore" />
+                            </f:link.typolink>
+                         </f:if>
+                   </p>
+

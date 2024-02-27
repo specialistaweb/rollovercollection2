@@ -1,0 +1,99 @@
+{namespace bk2k = BK2K\BootstrapPackage\ViewHelpers}
+
+<f:comment>
+            #####################################################
+            default LAYOUT
+           #####################################################
+
+</f:comment>
+
+<f:if condition="{data.layout} == 0">
+
+<figure class="image">
+  <f:if condition="{file.link}">    
+        <f:then>
+            <f:link.typolink parameter="{file.link}" title="{file.title}">
+                <f:render partial="Media/Rendering/Image" arguments="{file: file, settings: settings}" />
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+ 			<f:if condition="{data.image_zoom}">
+                <f:then>
+                    <bk2k:link.lightbox
+                        image="{file}"
+                        maxHeight="{settings.lightbox.image.maxHeight}"
+                        maxWidth="{settings.lightbox.image.maxWidth}"
+                        class="{settings.lightbox.cssClass}"
+                        rel="{settings.lightbox.prefix}-{data.uid}"
+                        title="{file.properties.title}"
+                        caption="{file.properties.description}"
+                    >
+                        <f:render partial="Media/Rendering/Image" arguments="{file: file, data: data, settings: settings, variants: variants}" />
+                    </bk2k:link.lightbox>
+                </f:then>
+                <f:else>
+                    <f:render partial="Media/Rendering/Image" arguments="{file: file, data: data, settings: settings, variants: variants}" />
+                </f:else>
+            </f:if>
+        </f:else>
+      </f:if>
+    <f:if condition="{file.properties.description}">
+        <figcaption class="caption"><f:format.nl2br>{file.properties.description}</f:format.nl2br></figcaption>
+    </f:if>
+</figure>
+</f:if>
+
+
+
+
+
+
+
+<f:comment>
+            #####################################################
+            layout 2651-2657 CIRCLE 
+            #####################################################
+
+
+</f:comment> 
+ 
+<f:if condition="{data.layout} > 2650"> 
+  <f:if condition="{data.layout} < 2658"> 
+    <f:if condition="{data.layout} == 2653">
+     <f:then> 
+       <f:if condition="{settings.R2showMoreLink} == 1">
+        <f:then>
+              <figure class="image ch-grid image-{data.layout}">           
+                <f:render partial="Media/Rendering/layout{data.layout}" arguments="{data: data, file: file, settings: settings}" />         
+              </figure>
+        </f:then>
+        <f:else>
+            <f:link.typolink parameter="{file.link}" title="{file.title -> f:format.stripTags()}" class="rollover-link">
+              <figure class="image ch-grid image-{data.layout}">           
+                <f:render partial="Media/Rendering/layout{data.layout}" arguments="{data: data, file: file, settings: settings}" />         
+              </figure>
+            </f:link.typolink>
+        </f:else>
+      </f:if>
+     </f:then>
+     <f:else>
+       <f:if condition="{settings.R2showMoreLink} == 1">
+        <f:then>
+              <figure class="image ch-grid image-{data.layout}">           
+                <f:render partial="Media/Rendering/layout{data.layout}" arguments="{data: data, file: file, settings: settings}" />         
+              </figure>
+        </f:then>
+        <f:else>
+            <f:link.typolink parameter="{file.link}" title="{file.title -> f:format.stripTags()}" class="rollover-link">
+              <figure class="image ch-grid image-{data.layout}">           
+                <f:render partial="Media/Rendering/layout{data.layout}" arguments="{data: data, file: file, settings: settings}" />         
+              </figure>
+            </f:link.typolink>
+        </f:else>
+      </f:if>
+    </f:else>
+    </f:if>
+   <br />
+  </f:if>
+</f:if>
+

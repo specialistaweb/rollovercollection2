@@ -1,0 +1,12 @@
+<div class="ch-item-{data.layout} ch-img" style="background-image: url({f:uri.image(image: file)});">      
+              <div class="ch-info-wrap-{data.layout}" style="background: transparent;">
+                <div class="ch-info-{data.layout}">
+                  <div class="ch-info-front-{data.layout}" style="background-image: url({f:uri.image(image: file)});"></div>
+                  <div class="ch-info-back-2654">
+                        <f:render partial="Media/Rendering/chInfoContent" arguments="{file: file, settings: settings}" />
+                  </div>  
+                </div>
+              </div>
+            </div>
+
+<f:render partial="Media/Rendering/externalFigcaption" arguments="{file: file, settings: settings}" />

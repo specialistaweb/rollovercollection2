@@ -1,0 +1,14 @@
+     <figcaption class="caption caption-{data.layout}"> 
+        <h3 class="text-center">
+  <f:if condition="{settings.R2titleRawdataOutput}">
+    <f:then>
+    <f:format.raw>{file.title}</f:format.raw>
+          </f:then>
+          <f:else>
+    <f:format.stripTags>{file.title}</f:format.stripTags>
+          </f:else>
+  </f:if>
+  </h3>
+     </figcaption>
+
+

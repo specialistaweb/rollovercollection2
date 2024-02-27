@@ -1,0 +1,43 @@
+###########
+# TCEFORM #
+###########
+
+TCEFORM.tt_content.layout.types.textpic {
+  addItems.2651 = CIRCLE: style#1
+  addItems.2652 = CIRCLE: style#2
+  addItems.2653 = CIRCLE: style#3
+  addItems.2654 = CIRCLE: style#4
+  addItems.2655 = CIRCLE: style#5
+  addItems.2656 = CIRCLE: style#6
+  addItems.2657 = CIRCLE: style#7
+}
+
+TCEFORM.tt_content.layout.types.textmedia {
+  addItems.2651 = CIRCLE: style#1
+  addItems.2652 = CIRCLE: style#2
+  addItems.2653 = CIRCLE: style#3
+  addItems.2654 = CIRCLE: style#4
+  addItems.2655 = CIRCLE: style#5
+  addItems.2656 = CIRCLE: style#6
+  addItems.2657 = CIRCLE: style#7
+}
+
+TCEFORM.tt_content.layout.types.image {
+  addItems.2651 = CIRCLE: style#1
+  addItems.2652 = CIRCLE: style#2
+  addItems.2653 = CIRCLE: style#3
+  addItems.2654 = CIRCLE: style#4
+  addItems.2655 = CIRCLE: style#5
+  addItems.2656 = CIRCLE: style#6
+  addItems.2657 = CIRCLE: style#7
+}
+
+TCEFORM.tt_content.layout.types.media {
+  addItems.2651 = CIRCLE: style#1
+  addItems.2652 = CIRCLE: style#2
+  addItems.2653 = CIRCLE: style#3
+  addItems.2654 = CIRCLE: style#4
+  addItems.2655 = CIRCLE: style#5
+  addItems.2656 = CIRCLE: style#6
+  addItems.2657 = CIRCLE: style#7
+}
