@@ -17,14 +17,6 @@
         "bk2k/bootstrap-package": ">= 11 < 15",
         "typo3/cms-core": ">= 11 < 13"
     },
-    "package": {
-        "name": "specialistaweb/rollovercollection2",
-        "version": "7.0.3",
-        "dist": {
-            "url": "https://extensions.typo3.org/extension/download/rollovercollection2/7.0.3/zip",
-            "type": "zip"
-        }
-    },
     "keywords": [
         "TYPO3",
         "extension",
