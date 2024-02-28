@@ -1,8 +1,8 @@
 {
     "name": "specialistaweb/rollovercollection2",
-    "description": "only for bootstrap5 + boostrap package v.11+ - CIRCLE rollover effetcts from tympanus for cType textmedia, media, images, textpic - Only for bootstrap package 12+ with Bootstrap 5.x (SCSS) (bootstrap_package) library",
-    "license": "GPL-2.0-or-later",
     "type": "typo3-cms-extension",
+    "minimum-stability":"dev",
+    "description": "TYPO3 CMS - only for bootstrap5 + boostrap package v.11+ - CIRCLE rollover effetcts from tympanus for cType textmedia, media, images, textpic - Only for bootstrap package 12+ with Bootstrap 5.x (SCSS) (bootstrap_package) library",
     "authors": [
         {
             "name": "Alessandro Tuveri",
@@ -13,34 +13,28 @@
             "role": "Developer"
         }
     ],
-   "require": {
+    "keywords": [
+        "image",
+        "rollover",
+        "effect",
+        "block",
+        "div",
+        "columns",
+        "bootstrap5",
+        "bootstrap",
+        "hover",
+	"box"
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": { 
         "bk2k/bootstrap-package": ">= 11 < 15",
         "typo3/cms-core": ">= 11 < 13"
     },
-    "keywords": [
-        "TYPO3",
-        "extension",
-	"rollover",
-	"image",
-	"textpic",
-	"gallery",
-	"hover",
-	"effects",
-	"picture",
-	"bootstrap",
-	"package"
-    ], 
-    "suggest": [],
-    "conflict": [],
     "extra": {
         "typo3/cms": {
             "extension-key": "rollovercollection2"
         }
-    },
-    "version": "dev-local",
-    "autoload": {
-        "classmap": [
-            ""
-        ]
     }
 }
