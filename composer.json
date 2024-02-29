@@ -2,7 +2,7 @@
     "name": "specialistaweb/rollovercollection2",
     "type": "typo3-cms-extension",
     "minimum-stability":"dev",
-    "description": "TYPO3 CMS - only for bootstrap5 + boostrap package v.11+ - CIRCLE rollover effetcts from tympanus for cType textmedia, media, images, textpic - Only for bootstrap package 12+ with Bootstrap 5.x (SCSS) (bootstrap_package) library",
+    "description": "TYPO3 CMS - only for bootstrap5 + boostrap package v.11+ - CIRCLE rollover effetcts from tympanus for cType textmedia, media, images, textpic - Only for bootstrap package 12+ with Bootstrap 5.x (SCSS)",
     "authors": [
         {
             "name": "Alessandro Tuveri",
@@ -23,20 +23,20 @@
         "bootstrap5",
         "bootstrap",
         "hover",
-	"box"
+        "box"
     ],
-    "homepage": "https://typo3.specialistaweb.it/typo3-extensions/rollovereffects/circle",
+    "homepage": "https://typo3.specialistaweb.it/typo3-extensions/rollovereffects",
     "license": [
         "GPL-2.0-or-later"
     ],
+    "require": {
+        "bk2k/bootstrap-package": ">= 11 < 15",
+        "typo3/cms-core": ">= 11 < 13"
+    },
     "autoload": {
         "psr-4": {
             "SpecialistaWeb\\Rollovercollection2\\": "Classes"
         }
-    },
-    "require": { 
-        "bk2k/bootstrap-package": ">= 11 < 15",
-        "typo3/cms-core": ">= 11 < 13"
     },
     "extra": {
         "typo3/cms": {
