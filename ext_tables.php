@@ -9,5 +9,5 @@ defined('TYPO3') || die('Access denied.');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('rollovercollection2', 'Configuration/TypoScript', 'CIRCLE');
 
-
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript('rollovercollection2', 'setup', '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:rollovercollection2/Configuration/TypoScript/setup.ts>"');
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript('rollovercollection2', 'constants', '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:rollovercollection2/Configuration/TypoScript/constants.typoscript>"');
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript('rollovercollection2', 'setup', '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:rollovercollection2/Configuration/TypoScript/setup.typoscript>"');
