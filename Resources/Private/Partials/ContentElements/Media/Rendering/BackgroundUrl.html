@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    URL of the image used as CSS background.
+    Styles #1 and #2 scale the background with CSS (background-size: 120% auto), so a smaller file
+    looks the same: settings.R2imageMaxWidth is applied (0 = original file).
+    Styles #3-#7 show the background at its natural size, so they always get the original file.
+</f:comment>
+<f:variable name="maxWidth">{settings.R2imageMaxWidth as integer}</f:variable>
+<f:if condition="{maxWidth} > 0 && ({data.layout} == 2651 || {data.layout} == 2652)">
+    <f:then>{f:uri.image(image: file, maxWidth: maxWidth)}</f:then>
+    <f:else>{f:uri.image(image: file)}</f:else>
+</f:if>
+</html>

@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    Rollovercollection 2 - CIRCLE: one circle per image, effect selected by tt_content.layout
+    (2651 style#1 ... 2657 style#7).
+
+    Fields of the file reference: title = heading, description = text, link = target.
+    R2showMoreLink = 1: "more" link inside the circle. 0: the whole circle is linked.
+    This partial is only reached for the layouts above (see setup.typoscript).
+</f:comment>
+<f:variable name="partialArguments" value="{file: file, data: data, settings: settings}" />
+<f:if condition="{settings.R2showMoreLink} == 1">
+    <f:then>
+        <figure class="image ch-grid image-{data.layout}">
+            <f:render partial="Media/Rendering/Layout{data.layout}" arguments="{partialArguments}" />
+        </figure>
+    </f:then>
+    <f:else>
+        <f:link.typolink parameter="{file.link}" title="{file.title -> f:format.stripTags()}" class="rollover-link">
+            <figure class="image ch-grid image-{data.layout}">
+                <f:render partial="Media/Rendering/Layout{data.layout}" arguments="{partialArguments}" />
+            </figure>
+        </f:link.typolink>
+    </f:else>
+</f:if>
+<br />
+</html>

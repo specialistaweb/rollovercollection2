@@ -4,7 +4,7 @@
 }
 
 figcaption.caption-2657 {
-   display: $rollover2-style1-showcaption;
+   display: $rollover2-style7-showcaption;
 }
 
 .ch-item-2657  {
@@ -13,10 +13,6 @@ figcaption.caption-2657 {
   border-radius: 50%;
   position: relative;
   cursor: default;
-  -webkit-perspective: 900px;
-  -moz-perspective: 900px;
-  -o-perspective: 900px;
-  -ms-perspective: 900px;
   perspective: 900px;
 }
 
@@ -24,10 +20,6 @@ figcaption.caption-2657 {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
@@ -38,15 +30,7 @@ figcaption.caption-2657 {
   height: 100%;
   border-radius: 50%;
   background-position: center center;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
   transition: all 0.4s linear;
-  -webkit-transform-origin: 50% 0%;
-  -moz-transform-origin: 50% 0%;
-  -o-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
   transform-origin: 50% 0%;
 }
 
@@ -55,10 +39,6 @@ figcaption.caption-2657 {
 }
 
 .ch-info-2657  .ch-info-back-2657  {
-  -webkit-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
-  -moz-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
-  -o-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
-  -ms-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
   transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
   background: $rollover2-style7-bg;
   opacity: 0;
@@ -102,19 +82,11 @@ figcaption.caption-2657 {
 }
 
 .ch-item-2657:hover .ch-info-front-2657  {
-  -webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
-  -moz-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
-  -o-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
-  -ms-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
   transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
   opacity: 0;
 }
 
 .ch-item-2657:hover .ch-info-back-2657  {
-  -webkit-transform: rotate3d(1,0,0,0deg);
-  -moz-transform: rotate3d(1,0,0,0deg);
-  -o-transform: rotate3d(1,0,0,0deg);
-  -ms-transform: rotate3d(1,0,0,0deg);
   transform: rotate3d(1,0,0,0deg);
   opacity: 1;
 }

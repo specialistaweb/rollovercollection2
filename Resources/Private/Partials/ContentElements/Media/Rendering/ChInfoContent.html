@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    Texts inside a circle: title, description and the "more" link.
+    R2captionRawdataOutput = 1: HTML of the description is kept, cleaned by the TYPO3 HTML sanitizer.
+    R2captionRawdataOutput = 0: plain text only.
+</f:comment>
+<h3 class="text-center"><f:render partial="Media/Rendering/Title" arguments="{file: file, settings: settings}" /></h3>
+<p class="text-center">
+    <f:if condition="{settings.R2captionRawdataOutput} == 1">
+        <f:then><f:sanitize.html>{file.description}</f:sanitize.html></f:then>
+        <f:else>{file.description -> f:format.stripTags() -> f:format.htmlspecialchars(doubleEncode: 0)}</f:else>
+    </f:if>
+    <f:if condition="{settings.R2showMoreLink} == 1">
+        <f:link.typolink parameter="{file.link}" title="{file.title -> f:format.stripTags()}" class="ch-link">
+            <f:cObject typoscriptObjectPath="lib.rollovercollection2.label.readMore" />
+        </f:link.typolink>
+    </f:if>
+</p>
+</html>

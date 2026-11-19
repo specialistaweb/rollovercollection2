@@ -1,39 +1,29 @@
+# Rollovercollection 2 - CIRCLE: constants.
+# Used when the extension is included as static TypoScript template (sys_template record).
+# Sites using the site set "Specialistaweb/Rollovercollection2" get the same values from
+# Configuration/Sets/Rollovercollection2/settings.definitions.yaml (Site Management > Settings).
+# Keep the defaults of the two files in sync.
+
+# customsubcategory=general=General
 plugin.tx_rollovercollection2_rollovereffect2 {
   view {
-    # cat=plugin.tx_rollovercollection2_rollovereffect2/file; type=string; label=Path to template root (FE)
-    templateRootPath = EXT:rollovercollection2/Resources/Private/Templates/
-
-    # cat=plugin.tx_rollovercollection2_rollovereffect2/file; type=string; label=Path to template partials (FE)
-    partialRootPath = EXT:rollovercollection2/Resources/Private/Partials/
-
-    # cat=plugin.tx_rollovercollection2_rollovereffect2/file; type=string; label=Path to template layouts (FE)
-    layoutRootPath = EXT:rollovercollection2/Resources/Private/Layouts/
-
-    # cat=plugin.tx_rollovercollection2_rollovereffect2/file; type=string; label=Path to template SCSS folder
+    # cat=bootstrap package: rollovercollection2-circle/general/010; type=string; label=Path to the SCSS folder. Must contain theme.scss, with trailing slash
     scssPath = EXT:rollovercollection2/Resources/Public/Scss/Theme/
-
   }
-  persistence {
-    # cat=plugin.tx_rollovercollection2_rollovereffect2//a; type=string; label=Default storage PID
-    #storagePid =
-  }
-
   settings {
-
-    # cat=plugin.tx_rollovercollection2_rollovereffect2/settings; type=boolean; label= Title raw data output / warning, possible security break!
+    # cat=bootstrap package: rollovercollection2-circle/general/020; type=boolean; label=Title: keep HTML typed by editors. Cleaned by the TYPO3 HTML sanitizer. Off = plain text
     titleRawdataOutput = 0
-
-    # cat=plugin.tx_rollovercollection2_rollovereffect2/settings; type=boolean; label= Caption raw data output / warning, possible security break!
+    # cat=bootstrap package: rollovercollection2-circle/general/030; type=boolean; label=Caption: keep HTML typed by editors. Cleaned by the TYPO3 HTML sanitizer. Off = plain text
     captionRawdataOutput = 0
-
-    # cat=plugin.tx_rollovercollection2_rollovereffect2/settings; type=boolean; label= Show More link or not/ Show More link or link the whole circle - default is true, otherwise all block will be linked!
-    showMoreLink  = 1
-
+    # cat=bootstrap package: rollovercollection2-circle/general/040; type=boolean; label=Show the "more" link. Off = the whole circle is linked
+    showMoreLink = 1
+    # cat=bootstrap package: rollovercollection2-circle/general/050; type=int+; label=Maximum image width in pixels for styles #1 and #2. 0 = original file
+    imageMaxWidth = 800
   }
 }
 
 #####################
-###  SETTINGS     ###
+### SCSS SETTINGS ###
 #####################
 
 # customsubcategory=common=Common settings
@@ -45,170 +35,115 @@ plugin.tx_rollovercollection2_rollovereffect2 {
 # customsubcategory=style6=Style#6 settings
 # customsubcategory=style7=Style#7 settings
 
-plugin.bootstrap_package {
-    settings {
-          scss {
-          
-          # cat=bootstrap package: rollovercollection2-circle/common/080; type=string; label=$rollover2-brand-primary: base color for all effects
-          rollover2-brand-primary = $primary
+plugin.bootstrap_package.settings.scss {
 
-          # cat=bootstrap package: rollovercollection2-circle/style1/100; type=string; label=$rollover2-style1-iconsize: circle width/height (140-280px)
-          rollover2-style1-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/common/101; type=string; label=$rollover2-brand-primary: base color for all effects
+  rollover2-brand-primary = $primary
 
-          # cat=bootstrap package: rollovercollection2-circle/style1/101; type=options[none,block];  label=$rollover2-style1-showcaption: display or not the outside caption 
-          rollover2-style1-showcaption =  none     
+  # cat=bootstrap package: rollovercollection2-circle/style1/102; type=string; label=$rollover2-style1-iconsize: circle width/height (140-280px)
+  rollover2-style1-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/style1/103; type=options[none,block]; label=$rollover2-style1-showcaption: display or not the outside caption
+  rollover2-style1-showcaption = none
+  # cat=bootstrap package: rollovercollection2-circle/style1/104; type=string; label=$rollover2-style1-insetboxshadow: inset box shadow color
+  rollover2-style1-insetboxshadow = rgba(128,255,255,0.6)
+  # cat=bootstrap package: rollovercollection2-circle/style1/105; type=string; label=$rollover2-style1-hoverbg: mask hover bg
+  rollover2-style1-hoverbg = rgba(63,147,147, 0.8)
+  # cat=bootstrap package: rollovercollection2-circle/style1/106; type=string; label=$rollover2-style1-titlecolor: title (heading) color
+  rollover2-style1-titlecolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style1/107; type=string; label=$rollover2-style1-textcolor: text (paragraph) color
+  rollover2-style1-textcolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style1/108; type=string; label=$rollover2-style1-hoverlinkcolor: hover link color
+  rollover2-style1-hoverlinkcolor = yellow
 
-          # cat=bootstrap package: rollovercollection2-circle/style1/102; type=string; label=$rollover2-style1-insetboxshadow: inset box shadow color
-          rollover2-style1-insetboxshadow = rgba(128,255,255,0.6)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style1/103; type=string; label=$rollover2-style1-hoverbg: mask hover bg
-          rollover2-style1-hoverbg = rgba(63,147,147, 0.8)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style1/104; type=string; label=$rollover2-style1-titlecolor:title (heading) color
-          rollover2-style1-titlecolor = #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style1/105; type=string; label=$rollover2-style1-textcolor: text (paragraph) color
-          rollover2-style1-textcolor =  #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style1/106; type=string; label=$rollover2-style1-hoverlinkcolor: hover link color
-          rollover2-style1-hoverlinkcolor =  yellow
- 
-            
-          # cat=bootstrap package: rollovercollection2-circle/style2/200; type=string;  label=$rollover2-style2-iconsize: circle width/height (140-280px)
-           rollover2-style2-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/style2/109; type=string; label=$rollover2-style2-iconsize: circle width/height (140-280px)
+  rollover2-style2-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/style2/110; type=options[none,block]; label=$rollover2-style2-showcaption: display or not the outside caption
+  rollover2-style2-showcaption = block
+  # cat=bootstrap package: rollovercollection2-circle/style2/111; type=string; label=$rollover2-style2-insetboxshadow: inset box shadow color
+  rollover2-style2-insetboxshadow = rgba(128,255,255,0.6)
+  # cat=bootstrap package: rollovercollection2-circle/style2/112; type=string; label=$rollover2-style2-insetboxshadow-hover: inset box shadow hover color
+  rollover2-style2-insetboxshadow-hover = rgba(128,255,255,0.8)
+  # cat=bootstrap package: rollovercollection2-circle/style2/113; type=string; label=$rollover2-style2-hoverbg: mask hover bg
+  rollover2-style2-hoverbg = rgba(63,147,147, 0.8)
+  # cat=bootstrap package: rollovercollection2-circle/style2/114; type=string; label=$rollover2-style2-titlecolor: title (heading) color
+  rollover2-style2-titlecolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style2/115; type=string; label=$rollover2-style2-textcolor: text (paragraph) color
+  rollover2-style2-textcolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style2/116; type=string; label=$rollover2-style2-hoverlinkcolor: hover link color
+  rollover2-style2-hoverlinkcolor = yellow
 
-          # cat=bootstrap package: rollovercollection2-circle/style2/201; type=options[none,block];  label=$rollover2-style2-showcaption: display or not the outside caption 
-          rollover2-style2-showcaption =  none     
-            
-          # cat=bootstrap package: rollovercollection2-circle/style2/202; type=string; label=$rollover2-style2-insetboxshadow: inset box shadow color
-          rollover2-style2-insetboxshadow = rgba(128,255,255,0.6)
- 
-          # cat=bootstrap package: rollovercollection2-circle/style2/203; type=string; label=$rollover2-style2-insetboxshadow-hover: inset box shadow hover color 
-          rollover2-style2-insetboxshadow-hover = rgba(128,255,255,0.8)
-           
-          # cat=bootstrap package: rollovercollection2-circle/style2/204; type=string; label=$rollover2-style2-hoverbg: mask hover bg
-          rollover2-style2-hoverbg = rgba(63,147,147, 0.8)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style2/205; type=string; label=$rollover2-style2-titlecolor:title (heading) color
-          rollover2-style2-titlecolor = #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style2/206; type=string; label=$rollover2-style2-textcolor: text (paragraph) color
-          rollover2-style2-textcolor =  #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style2/207; type=string; label=$rollover2-style2-hoverlinkcolor: hover link color
-          rollover2-style2-hoverlinkcolor =  yellow                     
-            
-          
-          # cat=bootstrap package: rollovercollection2-circle/style3/300; type=string; label=$rollover2-style3-iconsize: circle width/height (140-280px)
-           rollover2-style3-iconsize = 180px
-            
-          # cat=bootstrap package: rollovercollection2-circle/style3/301; type=options[none,block];  label=$rollover2-style3-showcaption: display or not the outside caption 
-          rollover2-style3-showcaption =  none
-           
-          # cat=bootstrap package: rollovercollection2-circle/style3/302; type=string; label=$rollover2-style3-insetboxshadow: inset box shadow color
-          rollover2-style3-insetboxshadow = rgba(128,255,255,0.6)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style3/303; type=string; label=$rollover2-style3-hoverbg: mask hover bg
-          rollover2-style3-bg = rgba(63,72,147, 0.8)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style3/304; type=string; label=$rollover2-style3-titlecolor:title (heading) color
-          rollover2-style3-titlecolor = #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style3/305; type=string; label=$rollover2-style3-textcolor: text (paragraph) color
-          rollover2-style3-textcolor =  #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style3/306; type=string; label=$rollover2-style3-hoverlinkcolor: hover link color
-          rollover2-style3-hoverlinkcolor =  yellow 
-          
-            
-            
-          # cat=bootstrap package: rollovercollection2-circle/style4/400; type=string; label=$rollover2-style4-iconsize: circle width/height (140-280px)
-           rollover2-style4-iconsize = 180px
-            
-          # cat=bootstrap package: rollovercollection2-circle/style4/401; type=options[none,block];  label=$rollover2-style4-showcaption: display or not the outside caption 
-          rollover2-style4-showcaption =  none 
+  # cat=bootstrap package: rollovercollection2-circle/style3/117; type=string; label=$rollover2-style3-iconsize: circle width/height (140-280px)
+  rollover2-style3-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/style3/118; type=options[none,block]; label=$rollover2-style3-showcaption: display or not the outside caption
+  rollover2-style3-showcaption = block
+  # cat=bootstrap package: rollovercollection2-circle/style3/119; type=string; label=$rollover2-style3-insetboxshadow: inset box shadow color
+  rollover2-style3-insetboxshadow = rgba(128,255,255,0.6)
+  # cat=bootstrap package: rollovercollection2-circle/style3/120; type=string; label=$rollover2-style3-bg: mask hover bg
+  rollover2-style3-bg = rgba(63,72,147, 0.8)
+  # cat=bootstrap package: rollovercollection2-circle/style3/121; type=string; label=$rollover2-style3-titlecolor: title (heading) color
+  rollover2-style3-titlecolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style3/122; type=string; label=$rollover2-style3-textcolor: text (paragraph) color
+  rollover2-style3-textcolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style3/123; type=string; label=$rollover2-style3-hoverlinkcolor: hover link color
+  rollover2-style3-hoverlinkcolor = yellow
 
-          # cat=bootstrap package: rollovercollection2-circle/style4/402; type=string; label=$rollover2-style4-insetboxshadow: inset box shadow color
-          rollover2-style4-insetboxshadow = rgba(23, 30, 115, 0.32)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style4/403; type=string; label=$rollover2-style4-hoverbg: mask hover bg
-          rollover2-style4-bg = rgba(0,0,0, 1)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style4/404; type=string; label=$rollover2-style4-titlecolor:title (heading) color
-          rollover2-style4-titlecolor = #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style4/405; type=string; label=$rollover2-style4-textcolor: text (paragraph) color
-          rollover2-style4-textcolor =  #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style4/406; type=string; label=$rollover2-style4-hoverlinkcolor: hover link color
-          rollover2-style4-hoverlinkcolor =   rgba(255,242,34, 0.8);
-         
-            
-          # cat=bootstrap package: rollovercollection2-circle/style5/500; type=string;  label=$rollover2-style5-iconsize: circle width/height (140-280px)
-          rollover2-style5-iconsize = 180px
-            
-          # cat=bootstrap package: rollovercollection2-circle/style3/501; type=options[none,block];  label=$rollover2-style5-showcaption: display or not the outside caption 
-          rollover2-style5-showcaption =  none 
-            
-           # cat=bootstrap package: rollovercollection2-circle/style5/502; type=string; label=$rollover2-style5-insetboxshadow: inset box shadow color
-          rollover2-style5-insetboxshadow = rgba(23, 30, 115, 0.32)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style5/503; type=string; label=$rollover2-style5-hoverbg: mask hover bg
-          rollover2-style5-bg = #223e87 
-            
-          # cat=bootstrap package: rollovercollection2-circle/style5/504; type=string; label=$rollover2-style5-titlecolor:title (heading) color
-          rollover2-style5-titlecolor = #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style5/505; type=string; label=$rollover2-style5-textcolor: text (paragraph) color
-          rollover2-style5-textcolor =  #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style5/506; type=string; label=$rollover2-style5-hoverlinkcolor: hover link color
-          rollover2-style5-hoverlinkcolor =   yellow          
-                     
-            
-          # cat=bootstrap package: rollovercollection2-circle/style6/600; type=string; label=$rollover2-style6-iconsize: circle width/height (140-280px)
-          rollover2-style6-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/style4/124; type=string; label=$rollover2-style4-iconsize: circle width/height (140-280px)
+  rollover2-style4-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/style4/125; type=options[none,block]; label=$rollover2-style4-showcaption: display or not the outside caption
+  rollover2-style4-showcaption = block
+  # cat=bootstrap package: rollovercollection2-circle/style4/126; type=string; label=$rollover2-style4-insetboxshadow: inset box shadow color
+  rollover2-style4-insetboxshadow = rgba(23, 30, 115, 0.32)
+  # cat=bootstrap package: rollovercollection2-circle/style4/127; type=string; label=$rollover2-style4-bg: mask hover bg
+  rollover2-style4-bg = rgba(0,0,0, 1)
+  # cat=bootstrap package: rollovercollection2-circle/style4/128; type=string; label=$rollover2-style4-titlecolor: title (heading) color
+  rollover2-style4-titlecolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style4/129; type=string; label=$rollover2-style4-textcolor: text (paragraph) color
+  rollover2-style4-textcolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style4/130; type=string; label=$rollover2-style4-hoverlinkcolor: hover link color
+  rollover2-style4-hoverlinkcolor = rgba(255,242,34, 0.8)
 
-          # cat=bootstrap package: rollovercollection2-circle/style3/601; type=options[none,block];  label=$rollover2-style6-showcaption: display or not the outside caption 
-          rollover2-style6-showcaption =  none 
-            
-           # cat=bootstrap package: rollovercollection2-circle/style6/602; type=string; label=$rollover2-style6-insetboxshadow: inset box shadow color
-          rollover2-style6-insetboxshadow =  rgba(23, 30, 115, 0.32)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style6/603; type=string; label=$rollover2-style6-hoverbg: mask hover bg
-          rollover2-style6-bg = #f9f9f9
-            
-          # cat=bootstrap package: rollovercollection2-circle/style6/604; type=string; label=$rollover2-style6-titlecolor:title (heading) color
-          rollover2-style6-titlecolor = #121212
-            
-          # cat=bootstrap package: rollovercollection2-circle/style6/605; type=string; label=$rollover2-style6-textcolor: text (paragraph) color
-          rollover2-style6-textcolor =  #121212
-            
-          # cat=bootstrap package: rollovercollection2-circle/style6/606; type=string; label=$rollover2-style6-hoverlinkcolor: hover link color
-          rollover2-style6-hoverlinkcolor =   rgba(60,60,60, 0.8);
-            
-            
-          # cat=bootstrap package: rollovercollection2-circle/style7/700; type=string;  label=$rollover2-style7-iconsize: circle width/height (140-280px)
-          rollover2-style7-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/style5/131; type=string; label=$rollover2-style5-iconsize: circle width/height (140-280px)
+  rollover2-style5-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/style5/132; type=options[none,block]; label=$rollover2-style5-showcaption: display or not the outside caption
+  rollover2-style5-showcaption = none
+  # cat=bootstrap package: rollovercollection2-circle/style5/133; type=string; label=$rollover2-style5-insetboxshadow: inset box shadow color
+  rollover2-style5-insetboxshadow = rgba(23, 30, 115, 0.32)
+  # cat=bootstrap package: rollovercollection2-circle/style5/134; type=string; label=$rollover2-style5-bg: mask hover bg
+  rollover2-style5-bg = #223e87
+  # cat=bootstrap package: rollovercollection2-circle/style5/135; type=string; label=$rollover2-style5-titlecolor: title (heading) color
+  rollover2-style5-titlecolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style5/136; type=string; label=$rollover2-style5-textcolor: text (paragraph) color
+  rollover2-style5-textcolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style5/137; type=string; label=$rollover2-style5-hoverlinkcolor: hover link color
+  rollover2-style5-hoverlinkcolor = yellow
 
-          # cat=bootstrap package: rollovercollection2-circle/style3/701; type=options[none,block];  label=$rollover2-style7-showcaption: display or not the outside caption 
-          rollover2-style7-showcaption =  none 
-            
-          # cat=bootstrap package: rollovercollection2-circle/style7/702; type=string; label=$rollover2-style7-insetboxshadow: inset box shadow color
-          rollover2-style7-insetboxshadow = rgba(23, 30, 115, 0.32)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style7/703; type=string; label=$rollover2-style7-hoverbg: mask hover bg
-          rollover2-style7-bg = rgba(130,0,0, 1)
-            
-          # cat=bootstrap package: rollovercollection2-circle/style7/704; type=string; label=$rollover2-style7-titlecolor:title (heading) color
-          rollover2-style7-titlecolor = #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style7/705; type=string; label=$rollover2-style7-textcolor: text (paragraph) color
-          rollover2-style7-textcolor =  #fff
-            
-          # cat=bootstrap package: rollovercollection2-circle/style7/706; type=string; label=$rollover2-style7-hoverlinkcolor: hover link color
-          rollover2-style7-hoverlinkcolor =   yellow
-           
-          }
-    }
+  # cat=bootstrap package: rollovercollection2-circle/style6/138; type=string; label=$rollover2-style6-iconsize: circle width/height (140-280px)
+  rollover2-style6-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/style6/139; type=options[none,block]; label=$rollover2-style6-showcaption: display or not the outside caption
+  rollover2-style6-showcaption = none
+  # cat=bootstrap package: rollovercollection2-circle/style6/140; type=string; label=$rollover2-style6-insetboxshadow: inset box shadow color
+  rollover2-style6-insetboxshadow = rgba(23, 30, 115, 0.32)
+  # cat=bootstrap package: rollovercollection2-circle/style6/141; type=string; label=$rollover2-style6-bg: mask hover bg
+  rollover2-style6-bg = #f9f9f9
+  # cat=bootstrap package: rollovercollection2-circle/style6/142; type=string; label=$rollover2-style6-titlecolor: title (heading) color
+  rollover2-style6-titlecolor = #121212
+  # cat=bootstrap package: rollovercollection2-circle/style6/143; type=string; label=$rollover2-style6-textcolor: text (paragraph) color
+  rollover2-style6-textcolor = #121212
+  # cat=bootstrap package: rollovercollection2-circle/style6/144; type=string; label=$rollover2-style6-hoverlinkcolor: hover link color
+  rollover2-style6-hoverlinkcolor = rgba(60,60,60, 0.8)
+
+  # cat=bootstrap package: rollovercollection2-circle/style7/145; type=string; label=$rollover2-style7-iconsize: circle width/height (140-280px)
+  rollover2-style7-iconsize = 180px
+  # cat=bootstrap package: rollovercollection2-circle/style7/146; type=options[none,block]; label=$rollover2-style7-showcaption: display or not the outside caption
+  rollover2-style7-showcaption = block
+  # cat=bootstrap package: rollovercollection2-circle/style7/147; type=string; label=$rollover2-style7-insetboxshadow: inset box shadow color
+  rollover2-style7-insetboxshadow = rgba(23, 30, 115, 0.32)
+  # cat=bootstrap package: rollovercollection2-circle/style7/148; type=string; label=$rollover2-style7-bg: mask hover bg
+  rollover2-style7-bg = rgba(130,0,0, 1)
+  # cat=bootstrap package: rollovercollection2-circle/style7/149; type=string; label=$rollover2-style7-titlecolor: title (heading) color
+  rollover2-style7-titlecolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style7/150; type=string; label=$rollover2-style7-textcolor: text (paragraph) color
+  rollover2-style7-textcolor = #fff
+  # cat=bootstrap package: rollovercollection2-circle/style7/151; type=string; label=$rollover2-style7-hoverlinkcolor: hover link color
+  rollover2-style7-hoverlinkcolor = yellow
 }

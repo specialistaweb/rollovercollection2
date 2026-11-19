@@ -2,7 +2,6 @@
   cursor: pointer;
 }
 
-
 .gallery-row.flex {
    display: flex;
 }
@@ -32,7 +31,6 @@
   display: inline-block;
   margin: 20px;
 }
-
 
 a.ch-link div.ch-item:hover {
      cursor: pointer !important;
@@ -69,7 +67,6 @@ margin-bottom: 24px;
 
 // styles for typo3
 
-
 /*
 @media only screen and (max-width: 480px) {
   div.frame.frame-type-media div.col-md-4.col-sm-4.col-xs-4,
@@ -81,7 +78,6 @@ margin-bottom: 24px;
 }
 */
 
-
 //breakpoints
 
 .gallery-item {
@@ -89,17 +85,21 @@ margin-bottom: 24px;
     width: calc((100% / var(--gallery-columns)) - (var(--gallery-gap) * (var(--gallery-columns) - 1)) / var(--gallery-columns));
 }
 
-@media screen and (max-width: 1024px) {
- .gallery-row.rollover2 gallery-item.rollover2 {
-    --gallery-columns: 3;
- }
-}
+// DISABLED in 9.0.0: the selector is invalid or can never match, so browsers never applied this rule.
+// It is kept here for reference: fix the selector to enable it (see README, "Inactive CSS rules").
+// @media screen and (max-width: 1024px) {
+//  .gallery-row.rollover2 gallery-item.rollover2 {
+//     --gallery-columns: 3;
+//  }
+// }
 
-@media screen and (max-width: 720px) {
- .gallery-row.rollover2 gallery-item.rollover2 {
-    --gallery-columns: 2;
- }
-}
+// DISABLED in 9.0.0: the selector is invalid or can never match, so browsers never applied this rule.
+// It is kept here for reference: fix the selector to enable it (see README, "Inactive CSS rules").
+// @media screen and (max-width: 720px) {
+//  .gallery-row.rollover2 gallery-item.rollover2 {
+//     --gallery-columns: 2;
+//  }
+// }
 
 @media screen and (max-width: 480px) {
  .gallery-row.rollover2 .gallery-item.rollover2 {

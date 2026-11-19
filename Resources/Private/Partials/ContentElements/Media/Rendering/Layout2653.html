@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>Style #3</f:comment>
+<div class="ch-item-{data.layout}">
+    <div class="ch-info ch-info-{data.layout} ">
+        <f:render partial="Media/Rendering/ChInfoContent" arguments="{file: file, data: data, settings: settings}" />
+    </div>
+    <div class="ch-thumb-{data.layout} ch-img-{data.layout} ch-img" style="background-image: url('{f:render(partial: 'Media/Rendering/BackgroundUrl', arguments: _all) -> f:spaceless()}');"></div>
+</div>
+<f:render partial="Media/Rendering/ExternalFigcaption" arguments="{file: file, data: data, settings: settings}" />
+</html>

@@ -1,2 +1,4 @@
-name: Specialistaweb/rollovercollection2
-label: Rollovercollection2 - CIRCLE
+name: Specialistaweb/Rollovercollection2
+label: 'Rollovercollection 2 - CIRCLE'
+dependencies:
+  - bootstrap-package/full

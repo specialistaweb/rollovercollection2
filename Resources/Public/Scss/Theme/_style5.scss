@@ -47,10 +47,6 @@ figcaption.caption-2655 {
 }
 
 .ch-info-2655 .ch-info-front-2655 {
-  -webkit-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  -ms-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
   box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.8), inset 0 0 0 20px rgba(23, 30, 115, 0.32);
 }
@@ -58,19 +54,10 @@ figcaption.caption-2655 {
 .ch-info-2655 .ch-info-back-2655 {
   opacity: 0;
   background: $rollover2-style5-bg;
-  pointer-events: none;  
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);  
-  -webkit-transition: all 0.4s ease-in-out 0.2s;
-  -moz-transition: all 0.4s ease-in-out 0.2s;
-  -o-transition: all 0.4s ease-in-out 0.2s;
-  -ms-transition: all 0.4s ease-in-out 0.2s;
+  pointer-events: none;
+  transform: scale(1.5);
   transition: all 0.4s ease-in-out 0.2s;
 }
-
 
 .ch-info-2655 h3 {
   color: $rollover2-style5-titlecolor;
@@ -110,19 +97,11 @@ figcaption.caption-2655 {
 }
 
 .ch-item-2655:hover .ch-info-front-2655 {
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -o-transform: scale(0);
-  -ms-transform: scale(0);
   transform: scale(0); 
   opacity: 0;
 } 
 
 .ch-item-2655:hover .ch-info-back-2655 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1);
   
   opacity: 1;

@@ -1,0 +1,448 @@
+# Rollovercollection 2 - CIRCLE: site settings (Site Management > Settings).
+# Every setting is also available as TypoScript constant with the same key.
+# Keep the defaults in sync with Configuration/TypoScript/constants.typoscript.
+categories:
+  Rollovercollection2:
+    label: 'Rollovercollection 2 - CIRCLE'
+  Rollovercollection2.general:
+    label: 'General'
+    parent: Rollovercollection2
+  Rollovercollection2.common:
+    label: 'Common settings'
+    parent: Rollovercollection2
+  Rollovercollection2.style1:
+    label: 'Style#1 settings'
+    parent: Rollovercollection2
+  Rollovercollection2.style2:
+    label: 'Style#2 settings'
+    parent: Rollovercollection2
+  Rollovercollection2.style3:
+    label: 'Style#3 settings'
+    parent: Rollovercollection2
+  Rollovercollection2.style4:
+    label: 'Style#4 settings'
+    parent: Rollovercollection2
+  Rollovercollection2.style5:
+    label: 'Style#5 settings'
+    parent: Rollovercollection2
+  Rollovercollection2.style6:
+    label: 'Style#6 settings'
+    parent: Rollovercollection2
+  Rollovercollection2.style7:
+    label: 'Style#7 settings'
+    parent: Rollovercollection2
+
+settings:
+
+  plugin.tx_rollovercollection2_rollovereffect2.view.scssPath:
+    label: 'Path to the SCSS folder'
+    description: 'Folder containing theme.scss, with trailing slash. Change it only to use your own copy of the theme.'
+    category: Rollovercollection2.general
+    type: string
+    default: 'EXT:rollovercollection2/Resources/Public/Scss/Theme/'
+
+  plugin.tx_rollovercollection2_rollovereffect2.settings.titleRawdataOutput:
+    label: 'Title: keep HTML typed by editors'
+    description: 'On: HTML in the image title is kept and cleaned by the TYPO3 HTML sanitizer. Off: plain text only.'
+    category: Rollovercollection2.general
+    type: bool
+    default: false
+
+  plugin.tx_rollovercollection2_rollovereffect2.settings.captionRawdataOutput:
+    label: 'Caption: keep HTML typed by editors'
+    description: 'On: HTML in the image description is kept and cleaned by the TYPO3 HTML sanitizer. Off: plain text only.'
+    category: Rollovercollection2.general
+    type: bool
+    default: false
+
+  plugin.tx_rollovercollection2_rollovereffect2.settings.showMoreLink:
+    label: 'Show the "more" link'
+    description: 'On: a "more" link is shown inside the circle. Off: the whole circle is linked.'
+    category: Rollovercollection2.general
+    type: bool
+    default: true
+
+  plugin.tx_rollovercollection2_rollovereffect2.settings.imageMaxWidth:
+    label: 'Maximum image width in pixels for styles #1 and #2'
+    description: 'Styles #1 and #2 scale the background image with CSS, so a smaller file looks the same. 0 = deliver the original file. Styles #3-#7 always use the original file (see README).'
+    category: Rollovercollection2.general
+    type: int
+    default: 800
+
+  plugin.bootstrap_package.settings.scss.rollover2-brand-primary:
+    label: '$rollover2-brand-primary'
+    description: 'Base color for all effects'
+    category: Rollovercollection2.common
+    type: string
+    default: '$primary'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style1-iconsize:
+    label: '$rollover2-style1-iconsize'
+    description: 'Circle width/height (140-280px)'
+    category: Rollovercollection2.style1
+    type: string
+    default: '180px'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style1-showcaption:
+    label: '$rollover2-style1-showcaption'
+    description: 'Display or not the outside caption'
+    category: Rollovercollection2.style1
+    type: string
+    enum:
+      'none': 'none'
+      'block': 'block'
+    default: 'none'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style1-insetboxshadow:
+    label: '$rollover2-style1-insetboxshadow'
+    description: 'Inset box shadow color'
+    category: Rollovercollection2.style1
+    type: string
+    default: 'rgba(128,255,255,0.6)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style1-hoverbg:
+    label: '$rollover2-style1-hoverbg'
+    description: 'Mask hover bg'
+    category: Rollovercollection2.style1
+    type: string
+    default: 'rgba(63,147,147, 0.8)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style1-titlecolor:
+    label: '$rollover2-style1-titlecolor'
+    description: 'Title (heading) color'
+    category: Rollovercollection2.style1
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style1-textcolor:
+    label: '$rollover2-style1-textcolor'
+    description: 'Text (paragraph) color'
+    category: Rollovercollection2.style1
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style1-hoverlinkcolor:
+    label: '$rollover2-style1-hoverlinkcolor'
+    description: 'Hover link color'
+    category: Rollovercollection2.style1
+    type: string
+    default: 'yellow'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style2-iconsize:
+    label: '$rollover2-style2-iconsize'
+    description: 'Circle width/height (140-280px)'
+    category: Rollovercollection2.style2
+    type: string
+    default: '180px'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style2-showcaption:
+    label: '$rollover2-style2-showcaption'
+    description: 'Display or not the outside caption'
+    category: Rollovercollection2.style2
+    type: string
+    enum:
+      'none': 'none'
+      'block': 'block'
+    default: 'block'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style2-insetboxshadow:
+    label: '$rollover2-style2-insetboxshadow'
+    description: 'Inset box shadow color'
+    category: Rollovercollection2.style2
+    type: string
+    default: 'rgba(128,255,255,0.6)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style2-insetboxshadow-hover:
+    label: '$rollover2-style2-insetboxshadow-hover'
+    description: 'Inset box shadow hover color'
+    category: Rollovercollection2.style2
+    type: string
+    default: 'rgba(128,255,255,0.8)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style2-hoverbg:
+    label: '$rollover2-style2-hoverbg'
+    description: 'Mask hover bg'
+    category: Rollovercollection2.style2
+    type: string
+    default: 'rgba(63,147,147, 0.8)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style2-titlecolor:
+    label: '$rollover2-style2-titlecolor'
+    description: 'Title (heading) color'
+    category: Rollovercollection2.style2
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style2-textcolor:
+    label: '$rollover2-style2-textcolor'
+    description: 'Text (paragraph) color'
+    category: Rollovercollection2.style2
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style2-hoverlinkcolor:
+    label: '$rollover2-style2-hoverlinkcolor'
+    description: 'Hover link color'
+    category: Rollovercollection2.style2
+    type: string
+    default: 'yellow'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style3-iconsize:
+    label: '$rollover2-style3-iconsize'
+    description: 'Circle width/height (140-280px)'
+    category: Rollovercollection2.style3
+    type: string
+    default: '180px'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style3-showcaption:
+    label: '$rollover2-style3-showcaption'
+    description: 'Display or not the outside caption'
+    category: Rollovercollection2.style3
+    type: string
+    enum:
+      'none': 'none'
+      'block': 'block'
+    default: 'block'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style3-insetboxshadow:
+    label: '$rollover2-style3-insetboxshadow'
+    description: 'Inset box shadow color'
+    category: Rollovercollection2.style3
+    type: string
+    default: 'rgba(128,255,255,0.6)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style3-bg:
+    label: '$rollover2-style3-bg'
+    description: 'Mask hover bg'
+    category: Rollovercollection2.style3
+    type: string
+    default: 'rgba(63,72,147, 0.8)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style3-titlecolor:
+    label: '$rollover2-style3-titlecolor'
+    description: 'Title (heading) color'
+    category: Rollovercollection2.style3
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style3-textcolor:
+    label: '$rollover2-style3-textcolor'
+    description: 'Text (paragraph) color'
+    category: Rollovercollection2.style3
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style3-hoverlinkcolor:
+    label: '$rollover2-style3-hoverlinkcolor'
+    description: 'Hover link color'
+    category: Rollovercollection2.style3
+    type: string
+    default: 'yellow'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style4-iconsize:
+    label: '$rollover2-style4-iconsize'
+    description: 'Circle width/height (140-280px)'
+    category: Rollovercollection2.style4
+    type: string
+    default: '180px'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style4-showcaption:
+    label: '$rollover2-style4-showcaption'
+    description: 'Display or not the outside caption'
+    category: Rollovercollection2.style4
+    type: string
+    enum:
+      'none': 'none'
+      'block': 'block'
+    default: 'block'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style4-insetboxshadow:
+    label: '$rollover2-style4-insetboxshadow'
+    description: 'Inset box shadow color'
+    category: Rollovercollection2.style4
+    type: string
+    default: 'rgba(23, 30, 115, 0.32)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style4-bg:
+    label: '$rollover2-style4-bg'
+    description: 'Mask hover bg'
+    category: Rollovercollection2.style4
+    type: string
+    default: 'rgba(0,0,0, 1)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style4-titlecolor:
+    label: '$rollover2-style4-titlecolor'
+    description: 'Title (heading) color'
+    category: Rollovercollection2.style4
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style4-textcolor:
+    label: '$rollover2-style4-textcolor'
+    description: 'Text (paragraph) color'
+    category: Rollovercollection2.style4
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style4-hoverlinkcolor:
+    label: '$rollover2-style4-hoverlinkcolor'
+    description: 'Hover link color'
+    category: Rollovercollection2.style4
+    type: string
+    default: 'rgba(255,242,34, 0.8)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style5-iconsize:
+    label: '$rollover2-style5-iconsize'
+    description: 'Circle width/height (140-280px)'
+    category: Rollovercollection2.style5
+    type: string
+    default: '180px'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style5-showcaption:
+    label: '$rollover2-style5-showcaption'
+    description: 'Display or not the outside caption'
+    category: Rollovercollection2.style5
+    type: string
+    enum:
+      'none': 'none'
+      'block': 'block'
+    default: 'none'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style5-insetboxshadow:
+    label: '$rollover2-style5-insetboxshadow'
+    description: 'Inset box shadow color'
+    category: Rollovercollection2.style5
+    type: string
+    default: 'rgba(23, 30, 115, 0.32)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style5-bg:
+    label: '$rollover2-style5-bg'
+    description: 'Mask hover bg'
+    category: Rollovercollection2.style5
+    type: string
+    default: '#223e87'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style5-titlecolor:
+    label: '$rollover2-style5-titlecolor'
+    description: 'Title (heading) color'
+    category: Rollovercollection2.style5
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style5-textcolor:
+    label: '$rollover2-style5-textcolor'
+    description: 'Text (paragraph) color'
+    category: Rollovercollection2.style5
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style5-hoverlinkcolor:
+    label: '$rollover2-style5-hoverlinkcolor'
+    description: 'Hover link color'
+    category: Rollovercollection2.style5
+    type: string
+    default: 'yellow'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style6-iconsize:
+    label: '$rollover2-style6-iconsize'
+    description: 'Circle width/height (140-280px)'
+    category: Rollovercollection2.style6
+    type: string
+    default: '180px'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style6-showcaption:
+    label: '$rollover2-style6-showcaption'
+    description: 'Display or not the outside caption'
+    category: Rollovercollection2.style6
+    type: string
+    enum:
+      'none': 'none'
+      'block': 'block'
+    default: 'none'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style6-insetboxshadow:
+    label: '$rollover2-style6-insetboxshadow'
+    description: 'Inset box shadow color'
+    category: Rollovercollection2.style6
+    type: string
+    default: 'rgba(23, 30, 115, 0.32)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style6-bg:
+    label: '$rollover2-style6-bg'
+    description: 'Mask hover bg'
+    category: Rollovercollection2.style6
+    type: string
+    default: '#f9f9f9'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style6-titlecolor:
+    label: '$rollover2-style6-titlecolor'
+    description: 'Title (heading) color'
+    category: Rollovercollection2.style6
+    type: string
+    default: '#121212'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style6-textcolor:
+    label: '$rollover2-style6-textcolor'
+    description: 'Text (paragraph) color'
+    category: Rollovercollection2.style6
+    type: string
+    default: '#121212'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style6-hoverlinkcolor:
+    label: '$rollover2-style6-hoverlinkcolor'
+    description: 'Hover link color'
+    category: Rollovercollection2.style6
+    type: string
+    default: 'rgba(60,60,60, 0.8)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style7-iconsize:
+    label: '$rollover2-style7-iconsize'
+    description: 'Circle width/height (140-280px)'
+    category: Rollovercollection2.style7
+    type: string
+    default: '180px'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style7-showcaption:
+    label: '$rollover2-style7-showcaption'
+    description: 'Display or not the outside caption'
+    category: Rollovercollection2.style7
+    type: string
+    enum:
+      'none': 'none'
+      'block': 'block'
+    default: 'block'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style7-insetboxshadow:
+    label: '$rollover2-style7-insetboxshadow'
+    description: 'Inset box shadow color'
+    category: Rollovercollection2.style7
+    type: string
+    default: 'rgba(23, 30, 115, 0.32)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style7-bg:
+    label: '$rollover2-style7-bg'
+    description: 'Mask hover bg'
+    category: Rollovercollection2.style7
+    type: string
+    default: 'rgba(130,0,0, 1)'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style7-titlecolor:
+    label: '$rollover2-style7-titlecolor'
+    description: 'Title (heading) color'
+    category: Rollovercollection2.style7
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style7-textcolor:
+    label: '$rollover2-style7-textcolor'
+    description: 'Text (paragraph) color'
+    category: Rollovercollection2.style7
+    type: string
+    default: '#fff'
+
+  plugin.bootstrap_package.settings.scss.rollover2-style7-hoverlinkcolor:
+    label: '$rollover2-style7-hoverlinkcolor'
+    description: 'Hover link color'
+    category: Rollovercollection2.style7
+    type: string
+    default: 'yellow'

@@ -1,8 +1,20 @@
 {
     "name": "specialistaweb/rollovercollection2",
     "type": "typo3-cms-extension",
-    "minimum-stability":"dev",
-    "description": "TYPO3 CMS - only for bootstrap5 + boostrap package v.11+ - CIRCLE rollover effetcts from tympanus for cType textmedia, media, images, textpic - Only for bootstrap package 12+ with Bootstrap 5.x (SCSS)",
+    "description": "CIRCLE: seven circular rollover effects (from tympanus.net) for the content elements textmedia, media, textpic and image. Requires bootstrap_package (Bootstrap 5).",
+    "keywords": [
+        "TYPO3",
+        "image",
+        "rollover",
+        "effect",
+        "hover",
+        "columns",
+        "bootstrap5",
+        "bootstrap",
+        "circle"
+    ],
+    "homepage": "https://typo3.specialistaweb.it/typo3-extensions/rollovereffects/circle",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Alessandro Tuveri",
@@ -13,30 +25,12 @@
             "role": "Developer"
         }
     ],
-    "keywords": [
-        "image",
-        "rollover",
-        "effect",
-        "block",
-        "div",
-        "columns",
-        "bootstrap5",
-        "bootstrap",
-        "hover",
-        "box"
-    ],
-    "homepage": "https://typo3.specialistaweb.it/typo3-extensions/rollovereffects/circle",
-    "license": [
-        "GPL-2.0-or-later"
-    ],
     "require": {
-        "bk2k/bootstrap-package": ">= 13 < 16",
-        "typo3/cms-core": ">= 12 < 14"
-    },
-    "autoload": {
-        "psr-4": {
-            "SpecialistaWeb\\Rollovercollection2\\": "Classes"
-        }
+        "php": "^8.2",
+        "bk2k/bootstrap-package": "^16.0",
+        "typo3/cms-core": "^13.4 || ^14.3",
+        "typo3/cms-fluid": "^13.4 || ^14.3",
+        "typo3/cms-frontend": "^13.4 || ^14.3"
     },
     "extra": {
         "typo3/cms": {
